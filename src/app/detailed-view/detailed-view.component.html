@@ -1,3 +1,28 @@
-<p>
-  detailed-view works!
-</p>
+<div class="row">
+  <!-- <h1 class="character-title shine">{{ character.name}}</h1> -->
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{{selectedCharacterImage}}" alt="" class="details-profile-image">
+          </div>
+          <div class="col-sm-6">
+            <h1 class="character-title shine">{{ character.name}}</h1>
+            <p> <span class="character-category"> Height </span> {{ character.height}}</p>
+            <p> <span class="character-category"> Mass</span> {{ character.mass }} </p>
+            <p> <span class="character-category"> Hair Color </span>   {{ character.hair_color }}</p>
+            <p> <span class="character-category"> Skin Color</span>  {{ character.skin_color }}</p>
+            <p> <span class="character-category"> Eye Color </span> {{ character.eye_color }}</p>
+            <p><span class="character-category"> Birth Year</span>  {{ character.birth_year }}</p>
+            <p><span class="character-category"> Gender </span> {{ character.gender }} </p>
+      
+          </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <button type="button" class="btn btn-lg btn-block back-button" (click)="switchView()">Back to Star Center</button>
+</div>
+
+

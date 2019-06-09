@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-character-image',
@@ -11,9 +11,15 @@ export class CharacterImageComponent implements OnInit {
     image: string,
     url: string
   }
+  @Output() characterSelected = new EventEmitter<{image: string, url: string}>()
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onCharacterClick ({ image, url}) {
+    this.characterSelected.emit({ image, url})
   }
 
 }

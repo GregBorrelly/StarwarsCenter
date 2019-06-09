@@ -2,10 +2,13 @@
 <app-header></app-header>
 <div class="container">
     <hr>
-    <div class="row">
+    <div class="row" *ngIf="view === 'card'">
       <div class="col-sm-3" *ngFor="let character of characters">
-        <app-character-image [character]="character"></app-character-image>
+        <app-character-image [character]="character"  (characterSelected)="onCharacterSelect($event)"></app-character-image>
       </div>
     </div>
-  </div>
 
+    <div class="row" *ngIf="view === 'detail'">
+      <app-detailed-view [character]="characterDetails" [selectedCharacterImage]="selectedCharacterImage" (backButtonPressed)="onBackButtonPressed()"></app-detailed-view>
+    </div>
+  </div>
