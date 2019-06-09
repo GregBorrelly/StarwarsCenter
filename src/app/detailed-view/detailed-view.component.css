@@ -18,7 +18,8 @@
 
 .back-button {
     background: #EA2177;
-    color: white;
+	color: white;
+	margin-bottom: 10px;
 }
 .shine,
 .chrome {

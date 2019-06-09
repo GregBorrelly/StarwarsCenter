@@ -8,7 +8,8 @@ import { CharacterComponent } from './character/character.component';
 import { CharacterImageComponent } from './character-image/character-image.component';
 import{ HttpClientModule} from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
-import { ErrorComponent } from './error/error.component'
+import { ErrorComponent } from './error/error.component';
+import { MovieComponent } from './detailed-view/movie/movie.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ErrorComponent } from './error/error.component'
     CharacterComponent,
     CharacterImageComponent,
     LoadingComponent,
-    ErrorComponent
+    ErrorComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,

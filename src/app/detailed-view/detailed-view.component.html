@@ -21,6 +21,12 @@
     </div>
   </div>
 </div>
+<div class="row" *ngIf="films.length">
+  <h1 class="character-category">Films</h1>
+  <div class="list-group" *ngFor="let film of films">
+    <app-movie [film]="film" ></app-movie>
+  </div>
+</div>
 <div class="row">
     <button type="button" class="btn btn-lg btn-block back-button" (click)="switchView()">Back to Star Center</button>
 </div>

@@ -43,7 +43,7 @@ export class AppComponent {
     this.view = "detail"
     this.loading = true
     this.CharacterLookupService.fetchDetails(url).subscribe(
-      res => {
+      (res:any) => {
         this.characterDetails = res
         // Set timeout just added to simulate network delay and show off the loader. Would not use outside of a coding challenge.  
         setTimeout(() => {
