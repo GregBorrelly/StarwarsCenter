@@ -6,6 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { DetailedViewComponent } from './detailed-view/detailed-view.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterImageComponent } from './character-image/character-image.component';
+import{ HttpClientModule} from '@angular/common/http';
+import { LoadingComponent } from './loading/loading.component';
+import { ErrorComponent } from './error/error.component'
 
 @NgModule({
   declarations: [
@@ -13,10 +16,13 @@ import { CharacterImageComponent } from './character-image/character-image.compo
     HeaderComponent,
     DetailedViewComponent,
     CharacterComponent,
-    CharacterImageComponent
+    CharacterImageComponent,
+    LoadingComponent,
+    ErrorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
