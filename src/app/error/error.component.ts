@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-error',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorComponent implements OnInit {
 
+  @Output() errorBtn =  new EventEmitter
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  btnPressed(){
+    this.errorBtn.emit()
   }
 
 }

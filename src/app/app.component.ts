@@ -60,4 +60,10 @@ export class AppComponent {
   onBackButtonPressed(){
     this.view = 'card'
   }
+
+  errorBtnPressed(){
+    this.view = 'card'
+    this.loading = false
+    this.error = null
+  }
 }

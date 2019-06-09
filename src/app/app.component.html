@@ -18,6 +18,6 @@
   </div>
 
   <div class="row" *ngIf="error">
-      <app-error></app-error>
+      <app-error (errorBtn)="errorBtnPressed()"></app-error>
     </div>
   
