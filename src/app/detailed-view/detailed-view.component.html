@@ -21,8 +21,13 @@
     </div>
   </div>
 </div>
+<h1 class="character-category">Films</h1>
+<div class="row" *ngIf="!films.length">
+  <div class="container">
+    loading movies...
+  </div>
+</div>
 <div class="row" *ngIf="films.length">
-  <h1 class="character-category">Films</h1>
   <div class="list-group" *ngFor="let film of films">
     <app-movie [film]="film" ></app-movie>
   </div>

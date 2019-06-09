@@ -33,9 +33,16 @@ export class DetailedViewComponent implements OnInit {
   constructor(private CharacterLookupService: CharacterLookupService) { }
 
   ngOnInit() {
-      this.CharacterLookupService.fetchMovieDetails(this.character.films).subscribe( res => {
-        this.films = res
-        debugger
+      this.CharacterLookupService.fetchMovieDetails(this.character.films)
+      .subscribe( (res:any) => {
+        let resData = res.map( film => {
+          const date = new Date(film.release_date)
+          const release_date = date.toDateString()
+          return {...film, release_date}
+        })
+        this.films = resData
+      }, error => {
+        console.error(error)
       })
     
   }
